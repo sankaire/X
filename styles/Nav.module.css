@@ -1,0 +1,18 @@
+.nav{
+    background-color: whitesmoke;
+    border-bottom: 2px whitesmoke solid;
+    align-items: center;
+    display: flex;
+    /* justify-content: center; */
+    padding: 10px;
+}
+.links{
+    display: flex;
+    list-style-type: none;
+}
+.links__items{
+    text-decoration: none;
+    color: skyblue;
+    font-size: 20px;
+    padding: 10px;
+}
