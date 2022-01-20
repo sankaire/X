@@ -1,15 +1,15 @@
 import Head from "next/head";
+import ArticleList from "../components/ArticleList";
 
 export default function Home({ article }) {
+  console.log(article)
   return (
     <div>
       <Head>
         <title>Web dev with next</title>
         <meta name="keyword" content="Web development programming" />
       </Head>
-      {article.map((article) => (
-        <h3>{article.title}</h3>
-      ))}
+      <ArticleList article={article} />
     </div>
   );
 }
