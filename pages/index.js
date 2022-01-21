@@ -13,15 +13,13 @@ export default function Home({ article }) {
     </div>
   );
 }
-export const getStaticProps = async () => {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?_limit=6`
-  );
-  const article = await response.json();
 
-  return {
-    props: {
-      article,
-    },
-  };
-};
+export async function getServerSideProps(){
+  //fetch data from an external api
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`)
+  const article = await res.json()
+  //pas the data to the page
+
+  return{props:{article}}
+}
+
